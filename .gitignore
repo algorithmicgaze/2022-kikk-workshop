@@ -2,4 +2,4 @@
 checkpoints/
 *.pyc
 *.pyo
-*_tfjs*
+figment/assets/*_tfjs*

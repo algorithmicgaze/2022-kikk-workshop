@@ -26,7 +26,7 @@ Download the latest version of Figment.
 Build a simple hand/face segmentation pipeline using the webcam.
 
 ![Example output](.github/figment-segmentation-result.jpg)
-[Example Figment File](figment_segmentation/face_segmentation_webcam.fgmt)
+[Example Figment File](figment/face_segmentation_webcam.fgmt)
 
 Save all output files as `.jpg` files in a directory; then create a ZIP file of the directory (On Mac: Right-Click > Compress)
 
@@ -54,9 +54,10 @@ If you don't have a model yet, you can download a complete prepared model from t
 
 Unzip the file in the `figment/assets` folder. So there should be a folder `figment/assets/unsplash_woman_tfjs`.
 
-Open the `face_inference.fgmt` script in the `figment` folder with Figment. You should be able to control the face with your webcam!
+Open the [`face_inference.fgmt`](figment/face_inference.fgmt) script in the `figment` folder with Figment. You should be able to control the face with your webcam!
 
 ![Figment Inference Example](.github/figment-inference.jpeg)
+[Example Figment File](figment/face_inference.fgmt)
 
 # Next Steps
 
