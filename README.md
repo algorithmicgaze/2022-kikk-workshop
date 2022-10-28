@@ -23,10 +23,10 @@
 
 Download the latest version of Figment.
 
-Build a simple segmentation pipeline using the webcam.
+Build a simple hand/face segmentation pipeline using the webcam.
 
 ![Example output](.github/figment-segmentation-result.jpg)
-[Example Figment File](figment_segmentation/segment_webcam.fgmt)
+[Example Figment File](figment_segmentation/face_segmentation_webcam.fgmt)
 
 Save all output files as `.jpg` files in a directory; then create a ZIP file of the directory (On Mac: Right-Click > Compress)
 
