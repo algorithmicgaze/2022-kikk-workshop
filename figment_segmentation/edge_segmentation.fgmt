@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": 8,
+      "name": "Load Movie",
+      "type": "image.loadMovie",
+      "x": 299.19375951754955,
+      "y": -5.137423180319201,
+      "values": {
+        "file": "assets/pexels_woman_dancing.mp4"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Resize",
+      "type": "image.resize",
+      "x": 249.92920217433186,
+      "y": 237.88881048506667
+    },
+    {
+      "id": 10,
+      "name": "Segment Pose",
+      "type": "ml.segmentPose",
+      "x": 392.7938987388363,
+      "y": 336.60673333652386
+    },
+    {
+      "id": 11,
+      "name": "Transform",
+      "type": "image.transform",
+      "x": 245.8573841600873,
+      "y": 127.04005531418905,
+      "values": {
+        "translateX": 0.41000000000000014
+      }
+    },
+    {
+      "id": 13,
+      "name": "Mask Image",
+      "type": "image.maskImage",
+      "x": 290.4166718701065,
+      "y": 591.6867889561514
+    },
+    {
+      "id": 14,
+      "name": "Constant",
+      "type": "image.constant",
+      "x": 219.10922479106372,
+      "y": 510.5797857470049,
+      "values": {
+        "color": [
+          255,
+          255,
+          255,
+          1
+        ],
+        "width": 512
+      }
+    },
+    {
+      "id": 15,
+      "name": "Blur",
+      "type": "image.blur",
+      "x": 416.70433064252796,
+      "y": 427.2787230834036
+    },
+    {
+      "id": 16,
+      "name": "Threshold",
+      "type": "image.threshold",
+      "x": 407.47194553614537,
+      "y": 505.4910223787,
+      "values": {
+        "threshold": 0.01
+      }
+    },
+    {
+      "id": 17,
+      "name": "Canny Edges",
+      "type": "image.canny",
+      "x": 805.2016097756072,
+      "y": 320.61736653697835,
+      "values": {
+        "factor": 5
+      }
+    },
+    {
+      "id": 18,
+      "name": "Composite",
+      "type": "image.composite",
+      "x": 385.9443998176603,
+      "y": 752.9214203667201,
+      "values": {
+        "factor": 1,
+        "operation": "darken"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "outNode": 9,
+      "outPort": "out",
+      "inNode": 10,
+      "inPort": "in"
+    },
+    {
+      "outNode": 8,
+      "outPort": "out",
+      "inNode": 11,
+      "inPort": "in"
+    },
+    {
+      "outNode": 11,
+      "outPort": "out",
+      "inNode": 9,
+      "inPort": "in"
+    },
+    {
+      "outNode": 14,
+      "outPort": "out",
+      "inNode": 13,
+      "inPort": "source"
+    },
+    {
+      "outNode": 10,
+      "outPort": "out",
+      "inNode": 15,
+      "inPort": "in"
+    },
+    {
+      "outNode": 15,
+      "outPort": "out",
+      "inNode": 16,
+      "inPort": "in"
+    },
+    {
+      "outNode": 16,
+      "outPort": "out",
+      "inNode": 13,
+      "inPort": "mask"
+    },
+    {
+      "outNode": 9,
+      "outPort": "out",
+      "inNode": 17,
+      "inPort": "in"
+    },
+    {
+      "outNode": 13,
+      "outPort": "out",
+      "inNode": 18,
+      "inPort": "image 1"
+    },
+    {
+      "outNode": 17,
+      "outPort": "out",
+      "inNode": 18,
+      "inPort": "image 2"
+    }
+  ],
+  "types": []
+}
