@@ -2,6 +2,8 @@
 
 ![Banner](.github/kikk-creative-ai-banner.png)
 
+Creative AI Workshop organised by [The Algorithmic Gaze](https://algorithmicgaze.com/).
+
 # Agenda
 
 ```
@@ -21,7 +23,7 @@
 
 # Figment
 
-Download the latest version of Figment.
+Download the [latest version of Figment](https://figmentapp.com/download/).
 
 Build a simple hand/face segmentation pipeline using the webcam.
 
