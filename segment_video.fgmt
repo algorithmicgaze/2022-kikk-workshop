@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "name": "Load Movie",
+      "type": "image.loadMovie",
+      "x": 150,
+      "y": 100,
+      "values": {
+        "file": "assets/unsplash_woman.mp4"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Resize",
+      "type": "image.resize",
+      "x": 150,
+      "y": 200
+    },
+    {
+      "id": 7,
+      "name": "Out",
+      "type": "core.out",
+      "x": 92.57264804482998,
+      "y": 451.30797920377984
+    },
+    {
+      "id": 8,
+      "name": "Detect Faces",
+      "type": "ml.detectFaces",
+      "x": 263.58543060573083,
+      "y": 285.76455347234287
+    },
+    {
+      "id": 9,
+      "name": "Stack",
+      "type": "image.stack",
+      "x": 188.37489665203285,
+      "y": 371.16855484205877
+    },
+    {
+      "id": 10,
+      "name": "Save Image",
+      "type": "image.saveImage",
+      "x": 213.96873647810924,
+      "y": 529.3019223388877,
+      "values": {
+        "folder": "assets/unsplash_woman_frames",
+        "template": "face-#####.jpg"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "outNode": 1,
+      "outPort": "out",
+      "inNode": 2,
+      "inPort": "in"
+    },
+    {
+      "outNode": 2,
+      "outPort": "out",
+      "inNode": 8,
+      "inPort": "in"
+    },
+    {
+      "outNode": 2,
+      "outPort": "out",
+      "inNode": 9,
+      "inPort": "image 1"
+    },
+    {
+      "outNode": 8,
+      "outPort": "out",
+      "inNode": 9,
+      "inPort": "image 2"
+    },
+    {
+      "outNode": 9,
+      "outPort": "out",
+      "inNode": 7,
+      "inPort": "in"
+    },
+    {
+      "outNode": 7,
+      "outPort": "out",
+      "inNode": 10,
+      "inPort": "in"
+    }
+  ],
+  "types": []
+}
