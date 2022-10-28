@@ -44,6 +44,30 @@ The `pix2pix_training/pix2pix_train_colab.ipynb` script is set up to run in [Goo
 
 If you have [Colab Pro](https://colab.research.google.com/signup/pricing), the script will execute substantially faster.
 
+# Inference
+
+Once the model has trained, you should be able to convert it to TensorFlow.js by running the last cells of the script.
+
+If you don't have a model yet, you can download a complete prepared model from this link:
+
+[unsplash_woman_tfjs.zip](https://enigmeta.s3.amazonaws.com/2022-kikk-workshop/unsplash_woman_tfjs.zip)
+
+Unzip the file in the `figment/assets` folder. So there should be a folder `figment/assets/unsplash_woman_tfjs`.
+
+Open the `face_inference.fgmt` script in the `figment` folder with Figment. You should be able to control the face with your webcam!
+
+![Figment Inference Example](.github/figment-inference.jpeg)
+
+# Next Steps
+
+Once the model is trained, try feeding in different things than a face. What happens if the lines are hands? Or shapes? Can you scan a drawing with your webcam and control the face that way?
+
+There are some quality improvements you can do too:
+
+- Training for longer can help a lot
+- Curating the dataset better might produce better results
+- For the next step in quality, try pix2pixHD.
+
 # pix2pixHD
 
 [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) is a version of pix2pix with substantial improvements in quality.

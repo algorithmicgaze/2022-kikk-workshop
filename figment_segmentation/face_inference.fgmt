@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": 8,
+      "name": "Webcam Image",
+      "type": "image.webcamImage",
+      "x": 161.79530927258537,
+      "y": 164.12436837981696
+    },
+    {
+      "id": 9,
+      "name": "Detect Faces",
+      "type": "ml.detectFaces",
+      "x": 317.0165172620823,
+      "y": 387.1514443573913
+    },
+    {
+      "id": 10,
+      "name": "Resize",
+      "type": "image.resize",
+      "x": 188.46029161876396,
+      "y": 258.76778050244843
+    },
+    {
+      "id": 11,
+      "name": "Image to Image Model",
+      "type": "ml.imageToImageModel",
+      "x": 357.7246400553546,
+      "y": 509.92978357533184,
+      "values": {
+        "model": "assets/unsplash_woman_tfjs"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Stack",
+      "type": "image.stack",
+      "x": 229.33460396510296,
+      "y": 631.1394706762067
+    },
+    {
+      "id": 13,
+      "name": "Out",
+      "type": "core.out",
+      "x": 198.92386413258586,
+      "y": 857.6470501184037
+    },
+    {
+      "id": 14,
+      "name": "Resize",
+      "type": "image.resize",
+      "x": 292.2533760323801,
+      "y": 745.4419065984265,
+      "values": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "outNode": 8,
+      "outPort": "image",
+      "inNode": 10,
+      "inPort": "in"
+    },
+    {
+      "outNode": 10,
+      "outPort": "out",
+      "inNode": 9,
+      "inPort": "in"
+    },
+    {
+      "outNode": 9,
+      "outPort": "out",
+      "inNode": 11,
+      "inPort": "in"
+    },
+    {
+      "outNode": 10,
+      "outPort": "out",
+      "inNode": 12,
+      "inPort": "image 1"
+    },
+    {
+      "outNode": 11,
+      "outPort": "out",
+      "inNode": 12,
+      "inPort": "image 2"
+    },
+    {
+      "outNode": 12,
+      "outPort": "out",
+      "inNode": 14,
+      "inPort": "in"
+    },
+    {
+      "outNode": 14,
+      "outPort": "out",
+      "inNode": 13,
+      "inPort": "in"
+    }
+  ],
+  "types": []
+}

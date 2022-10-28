@@ -95,6 +95,24 @@
         "factor": 1,
         "operation": "darken"
       }
+    },
+    {
+      "id": 19,
+      "name": "Save Image",
+      "type": "image.saveImage",
+      "x": 464.1988230423208,
+      "y": 951.3206339235653,
+      "values": {
+        "folder": "output",
+        "template": "image-#####.jpg"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Stack",
+      "type": "image.stack",
+      "x": 414.3620480809825,
+      "y": 874.5367610917177
     }
   ],
   "connections": [
@@ -135,12 +153,6 @@
       "inPort": "in"
     },
     {
-      "outNode": 16,
-      "outPort": "out",
-      "inNode": 13,
-      "inPort": "mask"
-    },
-    {
       "outNode": 9,
       "outPort": "out",
       "inNode": 17,
@@ -157,6 +169,30 @@
       "outPort": "out",
       "inNode": 18,
       "inPort": "image 2"
+    },
+    {
+      "outNode": 9,
+      "outPort": "out",
+      "inNode": 20,
+      "inPort": "image 1"
+    },
+    {
+      "outNode": 18,
+      "outPort": "out",
+      "inNode": 20,
+      "inPort": "image 2"
+    },
+    {
+      "outNode": 20,
+      "outPort": "out",
+      "inNode": 19,
+      "inPort": "in"
+    },
+    {
+      "outNode": 16,
+      "outPort": "out",
+      "inNode": 13,
+      "inPort": "mask"
     }
   ],
   "types": []
