@@ -19,8 +19,8 @@
       "id": 10,
       "name": "Resize",
       "type": "image.resize",
-      "x": 188.46029161876396,
-      "y": 258.76778050244843
+      "x": 183.97676401087605,
+      "y": 319.6156551809278
     },
     {
       "id": 11,
@@ -57,15 +57,19 @@
         "height": 1080,
         "fit": "contain"
       }
+    },
+    {
+      "id": 15,
+      "name": "Transform",
+      "type": "image.transform",
+      "x": 166.7617167709562,
+      "y": 242.99586664590822,
+      "values": {
+        "scaleX": -1
+      }
     }
   ],
   "connections": [
-    {
-      "outNode": 8,
-      "outPort": "image",
-      "inNode": 10,
-      "inPort": "in"
-    },
     {
       "outNode": 10,
       "outPort": "out",
@@ -100,6 +104,18 @@
       "outNode": 14,
       "outPort": "out",
       "inNode": 13,
+      "inPort": "in"
+    },
+    {
+      "outNode": 8,
+      "outPort": "image",
+      "inNode": 15,
+      "inPort": "in"
+    },
+    {
+      "outNode": 15,
+      "outPort": "out",
+      "inNode": 10,
       "inPort": "in"
     }
   ],
