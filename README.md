@@ -35,15 +35,27 @@ Save all output files as `.jpg` files in a directory; then create a ZIP file of 
 
 The `pix2pix_training/pix2pix_train_colab.ipynb` script is set up to run in [Google Colab](https://colab.research.google.com/):
 
+**[Open training script in Google Colab](https://colab.research.google.com/github/algorithmicgaze/2022-kikk-workshop/blob/main/pix2pix_training/pix2pix_train_colab.ipynb)**
+
 1. Go to [Google Colab](https://colab.research.google.com/)
 2. Choose the GitHub tab and type `https://github.com/algorithmicgaze/2022-kikk-workshop`
 3. Choose the pix2pix_train_colab.ipynb script.
 4. Run the first cell. You'll get a warning that the notebook was not authored by Google. Click "Run Anyway".
 5. Open the "Files" sidebar (click the icon on the left) and drag your ZIP file in the panel.
 6. Run all other cells, except for the cell marked as optional (the one that says "curl").
-7. After the training has completed, you will see a tfjs.zip file in the `output` folder. Click the three dots to download that file.
+7. After the training has completed, you will see a generator.zip file in the `output` folder. Click the three dots to download that file, or use the optional steps to copy to Google Drive
 
 If you have [Colab Pro](https://colab.research.google.com/signup/pricing), the script will execute substantially faster.
+
+## Converting to TensorFlow.js
+
+To run the model in realtime in Figment, you'll need to convert it to TensorFlow.js. You can use the following script to do that:
+
+**[Open conversion notebook in Google Colab](https://colab.research.google.com/github/algorithmicgaze/2022-kikk-workshop/blob/main/pix2pix_training/pix2pix_train_colab.ipynb)**
+
+1. Upload the generator.zip file you downloaded from the last step, or connect the notebook to Google Drive.
+2. Run all cells to do the conversion.
+3. The last cell will download a `tfjs.zip` file. Put that in your Figment project folder.
 
 # Inference
 
