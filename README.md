@@ -14,9 +14,8 @@ Creative AI Workshop organised by [The Algorithmic Gaze](https://algorithmicgaze
 12:30-13:30 Lunch Break
 13:30 Figment workshop
 14:00 Training basic model via Google Colab
-15:00 Collecting data: video, Pinterest
-16:00 Segmentation exercise
-17:00 Training custom model
+15:00 Collecting data
+16:00 Training custom model
 16:30 Scaling up: pix2pixHD
 16:45 Conclusion & Reflection
 ```
