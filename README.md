@@ -35,7 +35,7 @@ Save all output files as `.jpg` files in a directory; then create a ZIP file of 
 
 The `pix2pix_training/pix2pix_train_colab.ipynb` script is set up to run in [Google Colab](https://colab.research.google.com/):
 
-**[Open training script in Google Colab](https://colab.research.google.com/github/algorithmicgaze/2022-kikk-workshop/blob/main/pix2pix_training/pix2pix_train_colab.ipynb)**
+**[Open training notebook in Google Colab](https://colab.research.google.com/github/algorithmicgaze/2022-kikk-workshop/blob/main/pix2pix_training/pix2pix_train_colab.ipynb)**
 
 1. Go to [Google Colab](https://colab.research.google.com/)
 2. Choose the GitHub tab and type `https://github.com/algorithmicgaze/2022-kikk-workshop`
